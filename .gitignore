@@ -1,8 +1,11 @@
 .idea
-project/
 target/
 
 *.jar
 *.class
+*.iml
 *.zip
 *.rar
+
+src/main/resources/gmail-credentials.json
+src/main/resources/bot-credentials.properties
