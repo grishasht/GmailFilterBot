@@ -11,6 +11,12 @@
     <properties>
         <version.tg.bot.api>4.9.1</version.tg.bot.api>
         <java.version>11</java.version>
+        <version.google.api.client>1.23.0</version.google.api.client>
+        <version.google.oauth.client>1.23.0</version.google.oauth.client>
+        <version.google.api.gmail>v1-rev20200601-1.30.9</version.google.api.gmail>
+        <version.jwt>0.9.1</version.jwt>
+        <version.auth0>1.14.3</version.auth0>
+        <version.auth0.spring>1.2.5</version.auth0.spring>
     </properties>
 
     <build>
@@ -27,11 +33,55 @@
     </build>
 
     <dependencies>
+
+        <!--        Telegram bot API libs-->
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
             <version>${version.tg.bot.api}</version>
         </dependency>
+
+        <!--        Google API libs-->
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>${version.google.api.client}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.oauth-client</groupId>
+            <artifactId>google-oauth-client-jetty</artifactId>
+            <version>${version.google.oauth.client}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-gmail</artifactId>
+            <version>${version.google.api.gmail}</version>
+        </dependency>
+
+        <!--        JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${version.jwt}</version>
+        </dependency>
+
+        <!-- Auth0 -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>auth0</artifactId>
+            <version>${version.auth0}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>auth0-spring-security-api</artifactId>
+            <version>${version.auth0.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
